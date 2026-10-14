@@ -168,6 +168,41 @@
             text-decoration: underline;
         }
 
+          /* Estilo do Accordion */
+          .accordion-item {
+          border: 1px solid #e0c9ad;
+          background-color: #fffdf9;
+          border-radius: 5px;
+          overflow: hidden;
+        }
+
+        .accordion-button {
+          background-color: #ff7a75;
+          color: #5d473d;
+          font-family: Georgia, serif;
+        }
+
+        .accordion-button:not(.collapsed) {
+          background-color: #ff9e85;
+          color: #5d473d;
+          box-shadow: none;
+        }
+
+        .accordion-button:focus {
+          box-shadow: 0 0 0 0.2rem rgba(255, 122, 117, 0.25);
+        }
+
+        .accordion-body {
+          color: #5d473d;
+          background-color: #fffdf9;
+          font-size: 14px;
+        }
+
+        .accordion-body ul {
+          padding-left: 20px;
+        }
+        
+
 
         /* RESPONSIVIDADE */
 
@@ -286,159 +321,312 @@
 
     <main>
 
-        <h1>Tortas Gourmet</h1>
+    <h1>Tortas Gourmet</h1>
+ <hr> 
+ <br> 
 
-        <hr>
+ <!-- CARDS --> 
+  <div class="container"> 
+  <div class="row"> 
 
+  <!-- CARD 1 --> 
+  <div class="col-lg-3 col-md-6 col-sm-12 mb-4"> 
+  <div class="card">
 
-        <!-- CARDS -->
+ <img src="img/torta1.jpg" class="card-img-top img-fluid" alt="Torta de limão">
 
-        <div class="container">
+ <div class="card-body text-center"> 
+ <h5 class="card-title"> Torta de limão </h5>
 
-            <div class="row g-4">
+ <p class="card-text"> R$ 90,00 </p> 
 
+ <!-- ACCORDION 1 -->
+ <div class="accordion mt-3" id="accordion1">
 
-                <!-- CARD 1 -->
+    <div class="accordion-item">
 
-                <div class="col-lg-3 col-md-6 col-sm-12">
+        <h2 class="accordion-header" id="headingOne">
 
-                    <div class="card">
+            <button class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne">
 
-                        <img src="img/torta1.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Torta de limão">
+                descrição
 
-                        <div class="card-body text-center">
+            </button>
 
-                            <h5 class="card-title">
-                                Torta de limão
-                            </h5>
+        </h2>
 
-                            <p class="card-text">
-                                Um sabor cítrico e especial.
-                            </p>
+        <div id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordion1">
 
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
+            <div class="accordion-body text-start">
 
-                                Ver Cesta
+              
 
-                            </a>
+                <p><strong>Ingredientes:</strong></p>
 
-                        </div>
+                <ul>
+                    <li>Biscoito maisena</li>
+                    <li>Manteiga</li>
+                    <li>Leite condensado</li>
+                    <li>Creme de leite</li>
+                    <li>Suco de limão</li>
+                    <li>Raspas de limão</li>
+                    <li>Claras e açúcar para o merengue</li>
+                </ul>
 
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 2 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/torta10.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Torta de uva verde">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Torta de uva verde
-                            </h5>
-
-                            <p class="card-text">
-                                Uma combinação especial e inovadora.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 3 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/torta5.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Torta de morango">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Torta de morango
-                            </h5>
-
-                            <p class="card-text">
-                                Uma cremosa geleia de morango, sofisticada e irresistível.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 4 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/torta7.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Torta trufada">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Torta Trufada
-                            </h5>
-
-                            <p class="card-text">
-                                Cremosa, delicada e irresistivelmente sofisticada.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <p>
+                    Uma torta com base crocante, recheio cremoso
+                    de limão e cobertura delicada, equilibrando
+                    o doce com o azedinho da fruta!
+                </p>
 
             </div>
 
         </div>
 
-    </main>
+    </div>
 
+ </div>
+
+</div> 
+</div> 
+</div> 
+
+
+<!-- CARD 2 --> 
+ <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+ <div class="card"> 
+
+<img src="img/torta10.jpg" class="card-img-top img-fluid" alt="Torta de uva verde"> 
+
+<div class="card-body text-center"> 
+
+<h5 class="card-title"> Torta de uva verde </h5> 
+
+<p class="card-text"> R$ 110,00 </p> 
+
+<!-- ACCORDION 2 -->
+<div class="accordion mt-3" id="accordion2">
+
+    <div class="accordion-item">
+
+        <h2 class="accordion-header" id="headingTwo">
+
+            <button class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo">
+
+                descrição
+
+            </button>
+
+        </h2>
+
+        <div id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordion2">
+
+            <div class="accordion-body text-start">
+
+               
+
+                <p><strong>Ingredientes:</strong></p>
+
+                <ul>
+                    <li>Farinha de trigo</li>
+                    <li>Manteiga</li>
+                    <li>Açúcar</li>
+                    <li>Leite condensado</li>
+                    <li>Creme de leite</li>
+                    <li>Leite em pó</li>
+                    <li>Uvas verdes sem sementes</li>
+                    <li>Gelatina incolor para a cobertura, se desejada</li>
+                </ul>
+
+                <p>
+                    Uma torta delicada com creme suave e uvas verdes
+                    frescas, perfeita para quem aprecia sobremesas
+                    leves e sofisticadas!
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div> 
+</div> 
+</div> 
+
+
+<!-- CARD 3 --> 
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4"> 
+
+<div class="card"> 
+
+<img src="img/torta5.jpg" class="card-img-top img-fluid" alt="Torta de morango"> 
+
+<div class="card-body text-center"> 
+
+<h5 class="card-title"> Torta de morango </h5> 
+
+<p class="card-text"> R$ 100,00 </p> 
+
+<!-- ACCORDION 3 -->
+<div class="accordion mt-3" id="accordion3">
+
+    <div class="accordion-item">
+
+        <h2 class="accordion-header" id="headingThree">
+
+            <button class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree">
+
+                descrição
+
+            </button>
+
+        </h2>
+
+        <div id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordion3">
+
+            <div class="accordion-body text-start">
+
+                
+
+                <p><strong>Ingredientes:</strong></p>
+
+                <ul>
+                    <li>Farinha de trigo</li>
+                    <li>Manteiga</li>
+                    <li>Açúcar</li>
+                    <li>Leite</li>
+                    <li>Leite condensado</li>
+                    <li>Creme de leite</li>
+                    <li>Amido de milho</li>
+                    <li>Morangos frescos</li>
+                    <li>Geleia de brilho para a cobertura</li>
+                </ul>
+
+                <p>
+                    Uma deliciosa combinação de massa crocante,
+                    creme aveludado e morangos frescos,
+                    ideal para ocasiões especiais!
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div> 
+</div> 
+</div> 
+
+
+<!-- CARD 4 --> 
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4"> 
+
+<div class="card"> 
+
+<img src="img/torta7.jpg" class="card-img-top img-fluid" alt="Torta trufada"> 
+
+<div class="card-body text-center"> 
+
+<h5 class="card-title"> Torta Trufada </h5> 
+
+<p class="card-text"> R$ 110,00 </p> 
+
+<!-- ACCORDION 4 -->
+<div class="accordion mt-3" id="accordion4">
+
+    <div class="accordion-item">
+
+        <h2 class="accordion-header" id="headingFour">
+
+            <button class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour">
+
+                descrição
+
+            </button>
+
+        </h2>
+
+        <div id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#accordion4">
+
+            <div class="accordion-body text-start">
+
+             
+
+                <p><strong>Ingredientes:</strong></p>
+
+                <ul>
+                    <li>Farinha de trigo</li>
+                    <li>Ovos</li>
+                    <li>Açúcar</li>
+                    <li>Chocolate em pó</li>
+                    <li>Manteiga</li>
+                    <li>Chocolate meio amargo</li>
+                    <li>Creme de leite</li>
+                    <li>Leite condensado</li>
+                    <li>biscoitos para decorar</li>
+                </ul>
+
+                <p>
+                    Uma sobremesa intensa e cremosa, preparada
+                    com chocolate e recheio trufado para
+                    os verdadeiros amantes de chocolate!
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div> 
+</div> 
+</div> 
+
+</div> 
+</div>
+
+</main>
 
     
     <!-- RODAPÉ -->

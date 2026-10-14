@@ -168,6 +168,40 @@
             text-decoration: underline;
         }
 
+         /* Accordion */
+       .accordion-item {
+          border: 1px solid #e0c9ad;
+          background-color: #fffdf9;
+          border-radius: 5px;
+          overflow: hidden;
+       }
+
+       .accordion-button {
+          background-color: #ff7a75;
+          color: #5d473d;
+          font-family: Georgia, serif;
+       }
+
+       .accordion-button:not(.collapsed) {
+          background-color: #ff9e85;
+          color: #5d473d;
+          box-shadow: none;
+       }
+
+       .accordion-button:focus {
+          box-shadow: 0 0 0 0.2rem rgba(255, 122, 117, 0.25);
+       }
+
+       .accordion-body {
+          color: #5d473d;
+          background-color: #fffdf9;
+          font-size: 14px;
+       }
+
+       .accordion-body ul {
+          padding-left: 20px;
+       }
+
 
 
         /* RESPONSIVIDADE */
@@ -287,146 +321,81 @@
 
     <main>
 
-        <h1>Bolos Gourmet</h1>
+    <h1>Bolos Gourmet</h1>
 
-        <hr>
+<hr>
 
+<br>
 
-        <!-- CARDS -->
+<!-- CARDS -->
+<div class="container">
+<div class="row">
 
-        <div class="container">
+<!-- CARD 1 -->
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
 
-            <div class="row g-4">
+    <div class="card">
 
+        <img src="img/Bolo1.jpg"
+            class="card-img-top img-fluid"
+            alt="Bolo de brigadeiro com castanhas">
 
-                <!-- CARD 1 -->
+        <div class="card-body text-center">
 
-                <div class="col-lg-3 col-md-6 col-sm-12">
+            <h5 class="card-title">
+                Bolo de brigadeiro com castanhas
+            </h5>
 
-                    <div class="card">
+            <p class="card-text">R$ 90,00</p>
 
-                        <img src="img/Bolo1.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Bolo de brigadeiro com castanhas">
+            <!-- ACCORDION 1 -->
+            <div class="accordion mt-3" id="accordion1">
 
-                        <div class="card-body text-center">
+                <div class="accordion-item">
 
-                            <h5 class="card-title">
-                                Bolo de brigadeiro com castanhas
-                            </h5>
+                    <h2 class="accordion-header" id="headingOne">
 
-                            <p class="card-text">
-                                Chocolate cremoso e crocância em cada pedaço.
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne">
+
+                            Ver Cesta
+
+                        </button>
+
+                    </h2>
+
+                    <div id="collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#accordion1">
+
+                        <div class="accordion-body text-start">
+
+                            
+
+                            <p><strong>Ingredientes:</strong></p>
+
+                            <ul>
+                                <li>Farinha de trigo</li>
+                                <li>Ovos</li>
+                                <li>Açúcar</li>
+                                <li>Chocolate em pó</li>
+                                <li>Leite</li>
+                                <li>Manteiga</li>
+                                <li>Leite condensado</li>
+                                <li>Creme de leite</li>
+                                <li>Chocolate granulado</li>
+                                <li>Castanhas trituradas</li>
+                            </ul>
+
+                            <p>
+                                Bolo macio de chocolate com recheio
+                                cremoso de brigadeiro e castanhas crocantes!
                             </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 2 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/Bolo13.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Bolo de laranja com cobertura">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Bolo de laranja com cobertura
-                            </h5>
-
-                            <p class="card-text">
-                                Leve, macio e com sabor cítrico irresistível.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 3 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/Bolo15.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Bolo de doce de leite">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Bolo doce de leite
-                            </h5>
-
-                            <p class="card-text">
-                                Sabor artesanal e cremosidade em cada pedaço.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 4 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/Bolo5.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Bolo de chocolate">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Bolo de chocolate
-                            </h5>
-
-                            <p class="card-text">
-                                Bolo de chocolate saboroso, perfeito para qualquer ocasião.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
 
                         </div>
 
@@ -438,7 +407,265 @@
 
         </div>
 
-    </main>
+    </div>
+
+</div>
+
+
+<!-- CARD 2 -->
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+    <div class="card">
+
+        <img src="img/Bolo13.jpg"
+            class="card-img-top img-fluid"
+            alt="Bolo de laranja com cobertura">
+
+        <div class="card-body text-center">
+
+            <h5 class="card-title">
+                Bolo de laranja com cobertura
+            </h5>
+
+           
+
+            <p class="card-text">R$ 100,00</p>
+
+            <!-- ACCORDION 2 -->
+            <div class="accordion mt-3" id="accordion2">
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header" id="headingTwo">
+
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo">
+
+                            Ver Cesta
+
+                        </button>
+
+                    </h2>
+
+                    <div id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#accordion2">
+
+                        <div class="accordion-body text-start">
+
+                          
+
+                            <p><strong>Ingredientes:</strong></p>
+
+                            <ul>
+                                <li>Farinha de trigo</li>
+                                <li>Ovos</li>
+                                <li>Açúcar</li>
+                                <li>Suco de laranja natural</li>
+                                <li>Raspas de laranja</li>
+                                <li>Óleo</li>
+                                <li>Fermento em pó</li>
+                                <li>Leite condensado</li>
+                                <li>Creme de leite</li>
+                                <li>Calda de laranja</li>
+                            </ul>
+
+                            <p>
+                                Bolo fofinho e aromático, com sabor
+                                de laranja e uma cobertura deliciosa!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CARD 3 -->
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+    <div class="card">
+
+        <img src="img/Bolo15.jpg"
+            class="card-img-top img-fluid"
+            alt="Bolo de doce de leite">
+
+        <div class="card-body text-center">
+
+            <h5 class="card-title">
+                Bolo doce de leite
+            </h5>
+
+            <br>
+
+            <p class="card-text">R$ 100,00</p>
+
+            <!-- ACCORDION 3 -->
+            <div class="accordion mt-3" id="accordion3">
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header" id="headingThree">
+
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree">
+
+                            Ver Cesta
+
+                        </button>
+
+                    </h2>
+
+                    <div id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#accordion3">
+
+                        <div class="accordion-body text-start">
+
+                         
+
+                            <p><strong>Ingredientes:</strong></p>
+
+                            <ul>
+                                <li>Farinha de trigo</li>
+                                <li>Ovos</li>
+                                <li>Açúcar</li>
+                                <li>Leite</li>
+                                <li>Manteiga</li>
+                                <li>Fermento em pó</li>
+                                <li>Doce de leite cremoso</li>
+                                <li>Leite condensado</li>
+                                <li>Creme de leite</li>
+                               
+                            </ul>
+
+                            <p>
+                                Bolo macio com recheio de doce de leite,
+                                perfeito para quem ama sabores tradicionais!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CARD 4 -->
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+    <div class="card">
+
+        <img src="img/Bolo5.jpg"
+            class="card-img-top img-fluid"
+            alt="Bolo de chocolate">
+
+        <div class="card-body text-center">
+
+            <h5 class="card-title">
+                Bolo de chocolate
+            </h5>
+
+            <br>
+
+            <p class="card-text">R$ 110,00</p>
+
+            <!-- ACCORDION 4 -->
+            <div class="accordion mt-3" id="accordion4">
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header" id="headingFour">
+
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour"
+                            aria-expanded="false"
+                            aria-controls="collapseFour">
+
+                            Ver Cesta
+
+                        </button>
+
+                    </h2>
+
+                    <div id="collapseFour"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#accordion4">
+
+                        <div class="accordion-body text-start">
+
+                         
+
+                            <p><strong>Ingredientes:</strong></p>
+
+                            <ul>
+                                <li>Farinha de trigo</li>
+                                <li>Ovos</li>
+                                <li>Açúcar</li>
+                                <li>Chocolate em pó</li>
+                                <li>Leite</li>
+                                <li>Óleo</li>
+                                <li>Fermento em pó</li>
+                                <li>Leite condensado</li>
+                                <li>Creme de leite</li>
+                                <li>Chocolate meio amargo</li>
+                                <li>Morango e brigadeiro</li>
+                            </ul>
+
+                            <p>
+                                Bolo de chocolate com massa fofinha
+                                e cobertura cremosa, ideal para
+                                aniversários e ocasiões especiais!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+</main>
 
 
     <!-- RODAPÉ -->

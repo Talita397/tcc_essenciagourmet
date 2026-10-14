@@ -276,12 +276,7 @@ include "../conexao.php";
 
                 <li class="nav-item">
 
-                    <a href="../menu.php"
-                        class="nav-link text-white">
-
-                        Voltar ao Menu
-
-                    </a>
+                  
 
                 </li>
 
@@ -364,48 +359,10 @@ include "../conexao.php";
                 class="row g-3">
 
 
-                <!-- TÍTULO DA GALERIA -->
-
-                <div class="col-12">
-
-                    <label for="titulo_galeria"
-                        class="form-label">
-
-                        Título da galeria
-
-                    </label>
-
-                    <input type="text"
-                        name="titulo_galeria"
-                        id="titulo_galeria"
-                        class="form-control"
-                        maxlength="100"
-                        placeholder="Ex.: Novidades de Bolos"
-                        required>
-
-                </div>
+                
 
 
-                <!-- DESCRIÇÃO -->
-
-                <div class="col-12">
-
-                    <label for="descricao_galeria"
-                        class="form-label">
-
-                        Descrição
-
-                    </label>
-
-                    <textarea
-                        name="descricao_galeria"
-                        id="descricao_galeria"
-                        class="form-control"
-                        maxlength="255"
-                        rows="3"
-                        placeholder="Descreva brevemente esta galeria"></textarea>
-
-                </div>
+               
 
 
                 <!-- IMAGENS -->
@@ -433,6 +390,7 @@ include "../conexao.php";
                         com até 5 MB cada.
 
                     </div>
+                    <br>
 
                 </div>
 
@@ -470,20 +428,13 @@ include "../conexao.php";
                     </button>
 
                 </div>
-
-
-                <!-- BOTÃO VISUALIZAR -->
-
-                <div class="col-12">
-
-                    <a href="../telaprincipal.php"
-                        class="btn btn-visualizar">
-
-                        Visualizar Carrossel
-
-                    </a>
-
+                
+                <div class="col-12 mt-4">
+                <a href="../menu.php" class="btn btn-cadastrar">VOLTAR</a>
                 </div>
+
+
+                
 
 
             </form>
@@ -517,3 +468,4 @@ include "../conexao.php";
 </body>
 
 </html>
+

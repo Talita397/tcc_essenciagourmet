@@ -235,13 +235,7 @@ include "../conexao.php";
 
                 <li class="nav-item">
 
-                    <a href="../menu.php"
-                        class="nav-link text-white">
-
-                        Voltar ao Menu
-
-                    </a>
-
+                  
                 </li>
 
             </ul>
@@ -387,7 +381,7 @@ include "../conexao.php";
                         type="file"
                         id="formFile"
                         accept="image/*"
-                        name="imagem"
+                        name="foto"
                         required>
 
                 </div>
@@ -401,12 +395,13 @@ include "../conexao.php";
                         class="btn btn-cadastrar">
 
                         CADASTRAR
-
+                        
                     </button>
-
                 </div>
 
-
+                <div class="col-12 mt-4">
+                <a href="../menu.php" class="btn btn-cadastrar">VOLTAR</a>
+                </div>
             </form>
 
         </div>

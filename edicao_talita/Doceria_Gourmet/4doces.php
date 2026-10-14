@@ -168,6 +168,40 @@
             text-decoration: underline;
         }
 
+         /* Estilo do Accordion */
+       .accordion-item {
+          border: 1px solid #e0c9ad;
+          background-color: #fffdf9;
+          border-radius: 5px;
+          overflow: hidden;
+       }
+
+       .accordion-button {
+          background-color: #ff7a75;
+          color: #5d473d;
+          font-family: Georgia, serif;
+       }
+
+       .accordion-button:not(.collapsed) {
+          background-color: #ff9e85;
+          color: #5d473d;
+          box-shadow: none;
+       }
+
+       .accordion-button:focus {
+          box-shadow: 0 0 0 0.2rem rgba(255, 122, 117, 0.25);
+       }
+
+       .accordion-body {
+          color: #5d473d;
+          background-color: #fffdf9;
+          font-size: 14px;
+       }
+
+       .accordion-body ul {
+          padding-left: 20px;
+       }
+
 
 
         /* RESPONSIVIDADE */
@@ -287,146 +321,75 @@
 
     <main>
 
-        <h1>Doces Gourmet</h1>
+    <h1>Doces Gourmet</h1>
 
-        <hr>
+<hr>
 
+<br>
 
-        <!-- CARDS -->
+<!-- CARDS -->
+<div class="container">
+<div class="row">
 
-        <div class="container">
+<!-- CARD 1 -->
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
 
-            <div class="row g-4">
+    <div class="card">
 
+        <img src="img/Doce17.jpg"
+            class="card-img-top img-fluid"
+            alt="Brigadeiro de pistache">
 
-                <!-- CARD 1 -->
+        <div class="card-body text-center">
 
-                <div class="col-lg-3 col-md-6 col-sm-12">
+            <h5 class="card-title">Brigadeiro de pistache</h5>
 
-                    <div class="card">
+            <p class="card-text">R$ 30,00</p>
 
-                        <img src="img/Doce17.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Brigadeiro de pistache">
+            <!-- ACCORDION 1 -->
+            <div class="accordion mt-3" id="accordion1">
 
-                        <div class="card-body text-center">
+                <div class="accordion-item">
 
-                            <h5 class="card-title">
-                                Brigadeiro de pistache
-                            </h5>
+                    <h2 class="accordion-header" id="headingOne">
 
-                            <p class="card-text">
-                                Brigadeiro cremoso com sabor delicado e sofisticado de pistache.
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne">
+
+                            descrição
+
+                        </button>
+
+                    </h2>
+
+                    <div id="collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#accordion1">
+
+                        <div class="accordion-body text-start">
+
+                           
+
+                            <p><strong>Ingredientes:</strong></p>
+
+                            <ul>
+                                <li>Leite condensado</li>
+                                <li>Creme de leite</li>
+                                <li>Pasta de pistache</li>
+                                <li>Manteiga</li>
+                                <li>Pistache triturado para decorar</li>
+                            </ul>
+
+                            <p>
+                                Um brigadeiro cremoso e sofisticado,
+                                com o sabor marcante do pistache
+                                e uma finalização especial!
                             </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 2 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/Doce2.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Pão de mel gourmet">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Pão de mel gourmet
-                            </h5>
-
-                            <p class="card-text">
-                                Massa macia, recheio cremoso e uma deliciosa cobertura de chocolate.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 3 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/Doce6.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Beijinho com calda">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Beijinho com calda
-                            </h5>
-
-                            <p class="card-text">
-                                Doce de coco cremoso acompanhado de uma deliciosa calda.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 4 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/Doce7.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Alfajor gourmet">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Alfajor gourmet
-                            </h5>
-
-                            <p class="card-text">
-                                Delicado, recheado e coberto com chocolate para um sabor especial.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
 
                         </div>
 
@@ -438,10 +401,246 @@
 
         </div>
 
-    </main>
+    </div>
+
+</div>
 
 
-   
+<!-- CARD 2 -->
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+    <div class="card">
+
+        <img src="img/Doce2.jpg"
+            class="card-img-top img-fluid"
+            alt="Pão de mel gourmet">
+
+        <div class="card-body text-center">
+
+            <h5 class="card-title">Pão de mel gourmet</h5>
+
+            <p class="card-text">R$ 25,00</p>
+
+            <!-- ACCORDION 2 -->
+            <div class="accordion mt-3" id="accordion2">
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header" id="headingTwo">
+
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo">
+
+                            descrição
+
+                        </button>
+
+                    </h2>
+
+                    <div id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#accordion2">
+
+                        <div class="accordion-body text-start">
+
+                          
+
+                            <p><strong>Ingredientes:</strong></p>
+
+                            <ul>
+                                <li>Farinha de trigo</li>
+                                <li>Açúcar mascavo</li>
+                                <li>Leite</li>
+                                <li>Chocolate em pó</li>
+                                <li>Canela em pó</li>
+                                <li>Doce de leite para o recheio</li>
+                                <li>Chocolate meio amargo para a cobertura</li>
+                            </ul>
+
+                            <p>
+                                Um pão de mel macio e aromático,
+                                com uma deliciosa camada de chocolate!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CARD 3 -->
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+    <div class="card">
+
+        <img src="img/Doce6.jpg"
+            class="card-img-top img-fluid"
+            alt="Beijinho com calda">
+
+        <div class="card-body text-center">
+
+            <h5 class="card-title">Beijinho com calda</h5>
+
+            <p class="card-text">R$ 25,00</p>
+
+            <!-- ACCORDION 3 -->
+            <div class="accordion mt-3" id="accordion3">
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header" id="headingThree">
+
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree">
+
+                            descrição
+
+                        </button>
+
+                    </h2>
+
+                    <div id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#accordion3">
+
+                        <div class="accordion-body text-start">
+
+                            
+
+                            <p><strong>Ingredientes:</strong></p>
+
+                            <ul>
+                                <li>Leite condensado</li>
+                                <li>Coco ralado</li>
+                                <li>Creme de leite</li>
+                                <li>Manteiga</li>
+                                <li>Leite de coco</li>
+                                <li>Calda de caramelo</li>
+                                <li>Coco ralado para decorar</li>
+                            </ul>
+
+                            <p>
+                                Um doce delicado e cremoso,
+                                com sabor de coco e uma calda
+                                deliciosa para completar!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CARD 4 -->
+<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+    <div class="card">
+
+        <img src="img/Doce7.jpg"
+            class="card-img-top img-fluid"
+            alt="Alfajor gourmet recheado com doce de leite">
+
+        <div class="card-body text-center">
+
+            <h5 class="card-title">Alfajor gourmet</h5>
+
+            <p class="card-text">R$ 45,00</p>
+
+            <!-- ACCORDION 4 -->
+            <div class="accordion mt-3" id="accordion4">
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header" id="headingFour">
+
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour"
+                            aria-expanded="false"
+                            aria-controls="collapseFour">
+
+                            descrição
+
+                        </button>
+
+                    </h2>
+
+                    <div id="collapseFour"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#accordion4">
+
+                        <div class="accordion-body text-start">
+
+                            
+
+                            <p><strong>Ingredientes:</strong></p>
+
+                            <ul>
+                                <li>Farinha de trigo</li>
+                                <li>Amido de milho</li>
+                                <li>Manteiga</li>
+                                <li>Açúcar</li>
+                                <li>Ovos</li>
+                                <li>Doce de leite cremoso para o recheio</li>
+                                <li>Decorado com leite em pó polvilhado</li>
+                            </ul>
+
+                            <p>
+                                Biscoitos macios e delicados,
+                                recheados generosamente com doce de leite!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+</main>
+
+
+
     <!-- RODAPÉ -->
     <footer>
 

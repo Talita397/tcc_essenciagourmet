@@ -168,6 +168,48 @@
             text-decoration: underline;
         }
 
+         /* Estilo do Accordion */
+         .accordion-item {
+            border: 1px solid #e0c9ad;
+            background-color: #fffdf9;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background-color:rgb(222, 217, 216);
+            color: #5d473d;
+            font-family: Georgia, serif;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color:rgb(209, 174, 165);
+            color: #5d473d;
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.2rem rgba(255, 122, 117, 0.25);
+        }
+
+        .accordion-body {
+            color: #5d473d;
+            background-color: #fffdf9;
+            font-size: 14px;
+        }
+
+        .accordion-body ul {
+            padding-left: 20px;
+        }
+
+        .accordion-body li {
+            margin-bottom: 5px;
+        }
+
+        .card-title {
+            margin-top: 10px;
+        }
+
 
 
         /* RESPONSIVIDADE */
@@ -291,146 +333,85 @@
 
     <main>
 
-        <h1>Cafés Gourmet</h1>
+    <h1>Café da Manhã</h1>
 
-        <hr>
+<hr>
 
+<br>
 
-        <!-- CARDS -->
+<!-- CARDS DAS CESTAS -->
+<main class="container">
 
-        <div class="container">
+    <div class="row">
 
-            <div class="row g-4">
+        <!-- CARD 1: CESTA CAFÉ ESPECIAL -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
 
+            <div class="card">
 
-                <!-- CARD 1 -->
+                <img src="img/cafe1.jpg"
+                    class="card-img-top img-fluid"
+                    alt="Cesta de café gourmet">
 
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card-body text-center">
 
-                    <div class="card">
+                    <h5 class="card-title">
+                        Cesta Café Especial
+                    </h5>
 
-                        <img src="img/cafe1.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Cesta de café gourmet">
+                    <p class="card-text">R$ 180,00</p>
 
-                        <div class="card-body text-center">
+                    <!-- VER CESTA 1 -->
+                    <div class="accordion mt-3" id="accordion1">
 
-                            <h5 class="card-title">
-                                Cesta Café Especial
-                            </h5>
+                        <div class="accordion-item">
 
-                            <p class="card-text">
-                                Cesta com café, pães, frutas e deliciosos acompanhamentos.
-                            </p>
+                            <h2 class="accordion-header" id="headingOne">
 
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne"
+                                    aria-expanded="false"
+                                    aria-controls="collapseOne">
 
-                                Ver Cesta
+                                    Ver Cesta
 
-                            </a>
+                                </button>
 
-                        </div>
+                            </h2>
 
-                    </div>
+                            <div id="collapseOne"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingOne"
+                                data-bs-parent="#accordion1">
 
-                </div>
+                                <div class="accordion-body text-start">
 
+                                   
 
-                <!-- CARD 2 -->
+                                    <p><strong>Ingredientes da cesta:</strong></p>
 
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <ul>
+                                        <li>1 pacote de café gourmet</li>
+                                        <li>1 pacote de biscoitos amanteigados</li>
+                                        <li>1 geleia artesanal</li>
+                                        <li>1 pote de manteiga</li>
+                                        <li>1 bolo de chocolate</li>
+                                        <li>1 pode de yogurte</li>
+                                        <li>5 pães de queijo</li>
+                                        <li>1 caneca decorativa</li>
+                                    </ul>
 
-                    <div class="card">
+                                    <p>
+                                        Uma combinação especial de sabores
+                                        para tornar seu café da manhã ainda
+                                        mais elegante e inesquecível!
+                                    </p>
 
-                        <img src="img/cafe2.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Cesta de café da manhã">
+                                </div>
 
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Cesta Café da Manhã
-                            </h5>
-
-                            <p class="card-text">
-                                Uma combinação especial de cafés, doces e produtos selecionados.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 3 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/cafe3.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Cesta gourmet">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Cesta Gourmet
-                            </h5>
-
-                            <p class="card-text">
-                                Produtos gourmet selecionados para um café especial.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CARD 4 -->
-
-                <div class="col-lg-3 col-md-6 col-sm-12">
-
-                    <div class="card">
-
-                        <img src="img/cafe5.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Cesta especial de café">
-
-                        <div class="card-body text-center">
-
-                            <h5 class="card-title">
-                                Cesta Premium
-                            </h5>
-
-                            <p class="card-text">
-                                Uma cesta completa para deixar seu café ainda mais especial.
-                            </p>
-
-                            <a href="verCesta.html"
-                                class="btn btn-cafe">
-
-                                Ver Cesta
-
-                            </a>
+                            </div>
 
                         </div>
 
@@ -442,46 +423,260 @@
 
         </div>
 
-    </main>
 
+        <!-- CARD 2: CESTA CAFÉ DA MANHÃ -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
 
-    
-    <!-- RODAPÉ -->
-    <footer>
+            <div class="card">
 
-        <div>
-            <b>REDES E CONTATOS</b><br>
-            essenciagourmet.com.br<br>
-            WhatsApp: (12) 97823-1624 | 3061-0192
+                <img src="img/cafe2.jpg"
+                    class="card-img-top img-fluid"
+                    alt="Cesta de café da manhã">
+
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">
+                        Cesta Café da Manhã
+                    </h5>
+
+                    <p class="card-text">R$ 190,00</p>
+
+                    <!-- VER CESTA 2 -->
+                    <div class="accordion mt-3" id="accordion2">
+
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header" id="headingTwo">
+
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="collapseTwo">
+
+                                    Ver Cesta
+
+                                </button>
+
+                            </h2>
+
+                            <div id="collapseTwo"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingTwo"
+                                data-bs-parent="#accordion2">
+
+                                <div class="accordion-body text-start">
+
+                                    
+
+                                    <p><strong>Ingredientes da cesta:</strong></p>
+
+                                    <ul>
+                                        <li>4 croissants</li>
+                                        <li>1 pacote de bolacha amantegada</li>
+                                        <li>1 pacote de biscoitos doces</li>
+                                        <li>1 geleia de morango</li>
+                                        <li>1 suco de uva integral</li>
+                                        <li>1 Guardanapos personalizados</li>
+                                        <li>1 seleção de frutas frescas</li>
+                                        <li>1 caixa de bombons</li>
+                                    </ul>
+
+                                    <p>
+                                        Uma cesta deliciosa para começar
+                                        o dia com carinho, sabor e alegria!
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div>
-            <b>Envio</b><br>
-            <a href="#">Política de Privacidade</a><br>
-            <a href="#">Trocas e devoluções</a>
+
+        <!-- CARD 3: CESTA GOURMET -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+            <div class="card">
+
+                <img src="img/cafe3.jpg"
+                    class="card-img-top img-fluid"
+                    alt="Cesta gourmet com produtos especiais">
+
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">
+                        Cesta Gourmet
+                    </h5>
+
+                    <p class="card-text">R$ 190,00</p>
+
+                    <!-- VER CESTA 3 -->
+                    <div class="accordion mt-3" id="accordion3">
+
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header" id="headingThree">
+
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree"
+                                    aria-expanded="false"
+                                    aria-controls="collapseThree">
+
+                                    Ver Cesta
+
+                                </button>
+
+                            </h2>
+
+                            <div id="collapseThree"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingThree"
+                                data-bs-parent="#accordion3">
+
+                                <div class="accordion-body text-start">
+
+
+                                    <p><strong>Ingredientes da cesta:</strong></p>
+
+                                    <ul>
+                                        <li>1 queijo tipo gouda</li>
+                                        <li>1 salame italiano</li>
+                                        <li>2 pacotes de biscoitos</li>
+                                        <li>2 empadas</li>
+                                        <li>1 pacote de castanhas e nozes</li>
+                                        <li>1 chocolate artesanal</li>
+                                        <li>1 pote de frutas frescas</li>
+                                    </ul>
+
+                                    <p>
+                                        Uma seleção sofisticada de sabores,
+                                        ideal para presentear e surpreender
+                                        em momentos especiais!
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div>
-            <b>Formas de pagamento</b><br>
-            Dinheiro / Cartão de débito<br>
-            Cartão de crédito / Pix
+
+        <!-- CARD 4: CESTA PREMIUM -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+
+            <div class="card">
+
+                <img src="img/cafe5.jpg"
+                    class="card-img-top img-fluid"
+                    alt="Cesta premium de café da manhã">
+
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">
+                        Cesta Premium
+                    </h5>
+
+                    <p class="card-text">R$ 150,00</p>
+
+                    <!-- VER CESTA 4 -->
+                    <div class="accordion mt-3" id="accordion4">
+
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header" id="headingFour">
+
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFour">
+
+                                    Ver Cesta
+
+                                </button>
+
+                            </h2>
+
+                            <div id="collapseFour"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingFour"
+                                data-bs-parent="#accordion4">
+
+                                <div class="accordion-body text-start">
+
+
+                                    <p><strong>Ingredientes da cesta:</strong></p>
+
+                                    <ul>
+                                        <li>1 pacote de café especial</li>
+                                        <li>1 pacote de bolachas ao leite</li>
+                                        <li>1 pacote de cookies artesanais</li>
+                                        <li>1 geleia de frutas vermelhas</li>
+                                        <li>1 pacote de amêndoas</li>
+                                        <li>1 bombom artesanal</li>
+                                        <li>2 caneca para presente</li>
+                                    </ul>
+
+                                    <p>
+                                        Uma cesta charmosa, com produtos
+                                        selecionados para transformar
+                                        qualquer ocasião em um momento especial!
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div>
-            <b>ACOMPANHE</b><br>
-            @essenciagourmet_<br>
-            essencia_gourmet
-        </div>
+    </div>
 
-    </footer>
+</main>
 
 
-    <!-- Bootstrap - JavaScript -->
+<!-- RODAPÉ -->
+<footer class="row g-0">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwxHj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    </script>
+    <div class="col-12 rodape">
+        <p class="mb-0">
+            Essência Gourmet - Café da Manhã
+        </p>
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

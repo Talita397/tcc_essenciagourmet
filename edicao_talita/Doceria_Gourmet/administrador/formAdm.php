@@ -297,13 +297,7 @@ include "../conexao.php";
 
                 <li class="nav-item">
 
-                    <a href="../menu.php"
-                        class="nav-link text-white">
-
-                        Voltar ao Menu
-
-                    </a>
-
+                  
                 </li>
 
             </ul>
@@ -427,8 +421,12 @@ include "../conexao.php";
                         CADASTRAR
 
                     </button>
+                
 
                 </div>
+                <div class="col-12 mt-3">
+                   <a href="../menu.php" class="btn btn-cadastrar">VOLTAR</a>
+                 </div>
 
             </form>
 
