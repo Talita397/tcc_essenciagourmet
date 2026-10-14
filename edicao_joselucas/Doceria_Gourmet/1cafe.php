@@ -133,20 +133,41 @@
         }
 
 
-        /* RODAPÉ */
-
-        .rodape {
+       /* RODAPÉ */
+       footer {
             background-color: #765747;
             color: white;
+            margin-top: 40px;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 25px;
             text-align: center;
-            margin-top: 30px;
-            font-size: 13px;
+            font-size: 12px;
+            line-height: 1.7;
         }
 
-        .rodape p {
-            margin: 0;
+        footer div {
+            min-width: 180px;
         }
-        
+
+        footer b {
+            color: #fff8ed;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #e4c98a;
+            text-decoration: underline;
+        }
+
 
 
         /* RESPONSIVIDADE */
@@ -160,6 +181,16 @@
             .card-img-top {
                 height: 140px;
                 width: 140px;
+            }
+
+
+            footer {
+                flex-wrap: wrap;
+                padding: 25px 15px;
+            }
+
+            footer div {
+                min-width: 200px;
             }
 
         }
@@ -184,6 +215,17 @@
                 font-size: 14px;
             }
 
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer div {
+                width: 100%;
+            }
+
+
+
         }
 
     </style>
@@ -194,54 +236,55 @@
 <body>
 
 
-    <!-- BARRA DE NAVEGAÇÃO -->
+   <!-- BARRA DE NAVEGAÇÃO -->
 
-    <nav class="navbar navbar-expand-md navbar-dark cor_barra">
+   <nav class="navbar navbar-expand-md navbar-dark cor_barra">
 
-        <!-- Logo / Nome -->
+<!-- Logo / Nome -->
 
-        <a href="index.html" class="navbar-brand ms-3">
-            Essência Gourmet
-        </a>
-
-
-        <!-- Menu Hamburguer -->
-
-        <button class="navbar-toggler me-3"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navegacao"
-            aria-controls="navegacao"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
+<a href="index.html" class="navbar-brand ms-3">
+    Essência Gourmet
+</a>
 
 
-        <!-- Navegação -->
+<!-- Menu Hamburguer -->
 
-        <div class="collapse navbar-collapse" id="navegacao">
+<button class="navbar-toggler me-3"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navegacao"
+    aria-controls="navegacao"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
 
-            <ul class="navbar-nav ms-auto me-3">
+    <span class="navbar-toggler-icon"></span>
 
-                <li class="nav-item">
+</button>
 
-                    <a href="telaprincipal.php"
-                        class="nav-link text-white">
 
-                        Voltar ao Menu
+<!-- Navegação -->
 
-                    </a>
+<div class="collapse navbar-collapse" id="navegacao">
 
-                </li>
+    <ul class="navbar-nav ms-auto me-3">
 
-            </ul>
+        <li class="nav-item">
 
-        </div>
+            <a href="telaprincipal.php"
+                class="nav-link text-white">
 
-    </nav>
+                Voltar ao Menu
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</div>
+
+</nav>
+
 
 
     <!-- TÍTULO -->
@@ -402,53 +445,34 @@
     </main>
 
 
+    
     <!-- RODAPÉ -->
+    <footer>
 
-    
-    <footer class="rodape">
-        <div class="container py-4">
-    
-            <div class="row text-center">
-                
-                <div class="col-12 col-md-3 mb-3">
-                    <b>HOTEL HORIZONTE</b><br>
-                    Rua das Palmeiras, 250<br>
-                    Lorena - SP
-                </div>
-
-                <div class="col-12 col-md-3 mb-3">
-                    <b>CONTATO</b><br>
-    
-                    <i class="bi bi-telephone-fill"></i>
-                    (12) 97823-1624<br>
-    
-                    <i class="bi bi-envelope-fill"></i>
-                    contato.horizontehtll@gmail.com
-                </div>
-    
-                <div class="col-12 col-md-3 mb-3">
-                    <b>REDES SOCIAIS</b><br>
-    
-                    <a href="#">
-                        <i class="bi bi-instagram"></i>
-                        @horizontehtll_
-                    </a>
-                    <br>
-                    <a href="#">
-                        <i class="bi bi-facebook"></i>
-                        Hotel Horizonte
-                    </a>
-                </div>
-    
-                <div class="col-12 col-md-3 mb-3">
-                    <b>HOTEL HORIZONTE</b><br>
-                    © 2026 Hotel Horizonte<br>
-                    Todos os direitos reservados.
-                </div>
-    
-            </div>
-    
+        <div>
+            <b>REDES E CONTATOS</b><br>
+            essenciagourmet.com.br<br>
+            WhatsApp: (12) 97823-1624 | 3061-0192
         </div>
+
+        <div>
+            <b>Envio</b><br>
+            <a href="#">Política de Privacidade</a><br>
+            <a href="#">Trocas e devoluções</a>
+        </div>
+
+        <div>
+            <b>Formas de pagamento</b><br>
+            Dinheiro / Cartão de débito<br>
+            Cartão de crédito / Pix
+        </div>
+
+        <div>
+            <b>ACOMPANHE</b><br>
+            @essenciagourmet_<br>
+            essencia_gourmet
+        </div>
+
     </footer>
 
 

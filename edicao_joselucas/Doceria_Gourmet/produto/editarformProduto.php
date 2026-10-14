@@ -20,6 +20,7 @@ body{
     background-color:#f2f2f2;
     text-align:center;
 }
+
 .container{
     background:white;
     width:600px;

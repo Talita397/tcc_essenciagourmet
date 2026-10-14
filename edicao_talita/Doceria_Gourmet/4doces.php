@@ -134,19 +134,40 @@
 
 
         /* RODAPÉ */
-
-        .rodape {
+        footer {
             background-color: #765747;
             color: white;
-            padding: 25px 20px;
+            margin-top: 40px;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 25px;
             text-align: center;
-            margin-top: 30px;
-            font-size: 13px;
+            font-size: 12px;
+            line-height: 1.7;
         }
 
-        .rodape p {
-            margin: 0;
+        footer div {
+            min-width: 180px;
         }
+
+        footer b {
+            color: #fff8ed;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #e4c98a;
+            text-decoration: underline;
+        }
+
 
 
         /* RESPONSIVIDADE */
@@ -160,6 +181,15 @@
             .card-img-top {
                 height: 140px;
                 width: 140px;
+            }
+
+            footer {
+                flex-wrap: wrap;
+                padding: 25px 15px;
+            }
+
+            footer div {
+                min-width: 200px;
             }
 
         }
@@ -182,6 +212,15 @@
 
             .card-text {
                 font-size: 14px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer div {
+                width: 100%;
             }
 
         }
@@ -248,7 +287,7 @@
 
     <main>
 
-        <h1>Bolos Gourmet</h1>
+        <h1>Doces Gourmet</h1>
 
         <hr>
 
@@ -266,18 +305,18 @@
 
                     <div class="card">
 
-                        <img src="img/Bolo1.jpg"
+                        <img src="img/Doce17.jpg"
                             class="card-img-top img-fluid"
-                            alt="Bolo de brigadeiro com castanhas">
+                            alt="Brigadeiro de pistache">
 
                         <div class="card-body text-center">
 
                             <h5 class="card-title">
-                                Bolo de brigadeiro com castanhas
+                                Brigadeiro de pistache
                             </h5>
 
                             <p class="card-text">
-                                Chocolate cremoso e crocância em cada pedaço.
+                                Brigadeiro cremoso com sabor delicado e sofisticado de pistache.
                             </p>
 
                             <a href="verCesta.html"
@@ -300,18 +339,18 @@
 
                     <div class="card">
 
-                        <img src="img/Bolo13.jpg"
+                        <img src="img/Doce2.jpg"
                             class="card-img-top img-fluid"
-                            alt="Bolo de laranja com cobertura">
+                            alt="Pão de mel gourmet">
 
                         <div class="card-body text-center">
 
                             <h5 class="card-title">
-                                Bolo de laranja com cobertura
+                                Pão de mel gourmet
                             </h5>
 
                             <p class="card-text">
-                                Leve, macio e com sabor cítrico irresistível.
+                                Massa macia, recheio cremoso e uma deliciosa cobertura de chocolate.
                             </p>
 
                             <a href="verCesta.html"
@@ -334,18 +373,18 @@
 
                     <div class="card">
 
-                        <img src="img/Bolo15.jpg"
+                        <img src="img/Doce6.jpg"
                             class="card-img-top img-fluid"
-                            alt="Bolo de doce de leite">
+                            alt="Beijinho com calda">
 
                         <div class="card-body text-center">
 
                             <h5 class="card-title">
-                                Bolo doce de leite
+                                Beijinho com calda
                             </h5>
 
                             <p class="card-text">
-                                Sabor artesanal e cremosidade em cada pedaço.
+                                Doce de coco cremoso acompanhado de uma deliciosa calda.
                             </p>
 
                             <a href="verCesta.html"
@@ -368,18 +407,18 @@
 
                     <div class="card">
 
-                        <img src="img/Bolo5.jpg"
+                        <img src="img/Doce7.jpg"
                             class="card-img-top img-fluid"
-                            alt="Bolo de chocolate">
+                            alt="Alfajor gourmet">
 
                         <div class="card-body text-center">
 
                             <h5 class="card-title">
-                                Bolo de chocolate
+                                Alfajor gourmet
                             </h5>
 
                             <p class="card-text">
-                                Bolo de chocolate saboroso, perfeito para qualquer ocasião.
+                                Delicado, recheado e coberto com chocolate para um sabor especial.
                             </p>
 
                             <a href="verCesta.html"
@@ -402,21 +441,40 @@
     </main>
 
 
+   
     <!-- RODAPÉ -->
+    <footer>
 
-    <footer class="rodape">
+        <div>
+            <b>REDES E CONTATOS</b><br>
+            essenciagourmet.com.br<br>
+            WhatsApp: (12) 97823-1624 | 3061-0192
+        </div>
 
-        <p>
-            2026 - Essência Gourmet
-        </p>
+        <div>
+            <b>Envio</b><br>
+            <a href="#">Política de Privacidade</a><br>
+            <a href="#">Trocas e devoluções</a>
+        </div>
+
+        <div>
+            <b>Formas de pagamento</b><br>
+            Dinheiro / Cartão de débito<br>
+            Cartão de crédito / Pix
+        </div>
+
+        <div>
+            <b>ACOMPANHE</b><br>
+            @essenciagourmet_<br>
+            essencia_gourmet
+        </div>
 
     </footer>
 
 
     <!-- Bootstrap - JavaScript -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwxHj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous">
     </script>
 

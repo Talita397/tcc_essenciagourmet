@@ -133,20 +133,41 @@
         }
 
 
-        /* RODAPÉ */
-
-        .rodape {
+       /* RODAPÉ */
+       footer {
             background-color: #765747;
             color: white;
-            padding: 25px 20px;
+            margin-top: 40px;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 25px;
             text-align: center;
-            margin-top: 30px;
-            font-size: 13px;
+            font-size: 12px;
+            line-height: 1.7;
         }
 
-        .rodape p {
-            margin: 0;
+        footer div {
+            min-width: 180px;
         }
+
+        footer b {
+            color: #fff8ed;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #e4c98a;
+            text-decoration: underline;
+        }
+
 
 
         /* RESPONSIVIDADE */
@@ -160,6 +181,16 @@
             .card-img-top {
                 height: 140px;
                 width: 140px;
+            }
+
+
+            footer {
+                flex-wrap: wrap;
+                padding: 25px 15px;
+            }
+
+            footer div {
+                min-width: 200px;
             }
 
         }
@@ -184,6 +215,17 @@
                 font-size: 14px;
             }
 
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer div {
+                width: 100%;
+            }
+
+
+
         }
 
     </style>
@@ -194,61 +236,62 @@
 <body>
 
 
-    <!-- BARRA DE NAVEGAÇÃO -->
+   <!-- BARRA DE NAVEGAÇÃO -->
 
-    <nav class="navbar navbar-expand-md navbar-dark cor_barra">
+   <nav class="navbar navbar-expand-md navbar-dark cor_barra">
 
-        <!-- Logo / Nome -->
+<!-- Logo / Nome -->
 
-        <a href="index.html" class="navbar-brand ms-3">
-            Essência Gourmet
-        </a>
-
-
-        <!-- Menu Hamburguer -->
-
-        <button class="navbar-toggler me-3"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navegacao"
-            aria-controls="navegacao"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
+<a href="index.html" class="navbar-brand ms-3">
+    Essência Gourmet
+</a>
 
 
-        <!-- Navegação -->
+<!-- Menu Hamburguer -->
 
-        <div class="collapse navbar-collapse" id="navegacao">
+<button class="navbar-toggler me-3"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navegacao"
+    aria-controls="navegacao"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
 
-            <ul class="navbar-nav ms-auto me-3">
+    <span class="navbar-toggler-icon"></span>
 
-                <li class="nav-item">
+</button>
 
-                    <a href="telaprincipal.php"
-                        class="nav-link text-white">
 
-                        Voltar ao Menu
+<!-- Navegação -->
 
-                    </a>
+<div class="collapse navbar-collapse" id="navegacao">
 
-                </li>
+    <ul class="navbar-nav ms-auto me-3">
 
-            </ul>
+        <li class="nav-item">
 
-        </div>
+            <a href="telaprincipal.php"
+                class="nav-link text-white">
 
-    </nav>
+                Voltar ao Menu
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</div>
+
+</nav>
+
 
 
     <!-- TÍTULO -->
 
     <main>
 
-        <h1>Tortas Gourmet</h1>
+        <h1>Cafés Gourmet</h1>
 
         <hr>
 
@@ -266,18 +309,18 @@
 
                     <div class="card">
 
-                        <img src="img/torta1.jpg"
+                        <img src="img/cafe1.jpg"
                             class="card-img-top img-fluid"
-                            alt="Torta de limão">
+                            alt="Cesta de café gourmet">
 
                         <div class="card-body text-center">
 
                             <h5 class="card-title">
-                                Torta de limão
+                                Cesta Café Especial
                             </h5>
 
                             <p class="card-text">
-                                Um sabor cítrico e especial.
+                                Cesta com café, pães, frutas e deliciosos acompanhamentos.
                             </p>
 
                             <a href="verCesta.html"
@@ -300,18 +343,18 @@
 
                     <div class="card">
 
-                        <img src="img/torta10.jpg"
+                        <img src="img/cafe2.jpg"
                             class="card-img-top img-fluid"
-                            alt="Torta de uva verde">
+                            alt="Cesta de café da manhã">
 
                         <div class="card-body text-center">
 
                             <h5 class="card-title">
-                                Torta de uva verde
+                                Cesta Café da Manhã
                             </h5>
 
                             <p class="card-text">
-                                Uma combinação especial e inovadora.
+                                Uma combinação especial de cafés, doces e produtos selecionados.
                             </p>
 
                             <a href="verCesta.html"
@@ -334,18 +377,18 @@
 
                     <div class="card">
 
-                        <img src="img/torta5.jpg"
+                        <img src="img/cafe3.jpg"
                             class="card-img-top img-fluid"
-                            alt="Torta de morango">
+                            alt="Cesta gourmet">
 
                         <div class="card-body text-center">
 
                             <h5 class="card-title">
-                                Torta de morango
+                                Cesta Gourmet
                             </h5>
 
                             <p class="card-text">
-                                Uma cremosa geleia de morango, sofisticada e irresistível.
+                                Produtos gourmet selecionados para um café especial.
                             </p>
 
                             <a href="verCesta.html"
@@ -368,18 +411,18 @@
 
                     <div class="card">
 
-                        <img src="img/torta7.jpg"
+                        <img src="img/cafe5.jpg"
                             class="card-img-top img-fluid"
-                            alt="Torta trufada">
+                            alt="Cesta especial de café">
 
                         <div class="card-body text-center">
 
                             <h5 class="card-title">
-                                Torta Trufada
+                                Cesta Premium
                             </h5>
 
                             <p class="card-text">
-                                Cremosa, delicada e irresistivelmente sofisticada.
+                                Uma cesta completa para deixar seu café ainda mais especial.
                             </p>
 
                             <a href="verCesta.html"
@@ -402,13 +445,33 @@
     </main>
 
 
+    
     <!-- RODAPÉ -->
+    <footer>
 
-    <footer class="rodape">
+        <div>
+            <b>REDES E CONTATOS</b><br>
+            essenciagourmet.com.br<br>
+            WhatsApp: (12) 97823-1624 | 3061-0192
+        </div>
 
-        <p>
-            2026 - Essência Gourmet
-        </p>
+        <div>
+            <b>Envio</b><br>
+            <a href="#">Política de Privacidade</a><br>
+            <a href="#">Trocas e devoluções</a>
+        </div>
+
+        <div>
+            <b>Formas de pagamento</b><br>
+            Dinheiro / Cartão de débito<br>
+            Cartão de crédito / Pix
+        </div>
+
+        <div>
+            <b>ACOMPANHE</b><br>
+            @essenciagourmet_<br>
+            essencia_gourmet
+        </div>
 
     </footer>
 

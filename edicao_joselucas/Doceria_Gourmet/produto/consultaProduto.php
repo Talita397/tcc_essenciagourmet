@@ -413,7 +413,7 @@ include "../conexao.php";
 
                                 <!-- BOTÕES -->
 
-                                <a href="editarformProduto.php?id=<?=$pro_id?>"
+                                <a href="editarformProduto.php?id=<?= $pro_id ?>"
                                     class="btn btn-editar btn-sm">
 
                                     Editar

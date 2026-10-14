@@ -133,20 +133,41 @@
         }
 
 
-        /* RODAPÉ */
-
-        .rodape {
+       /* RODAPÉ */
+       footer {
             background-color: #765747;
             color: white;
-            padding: 25px 20px;
+            margin-top: 40px;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 25px;
             text-align: center;
-            margin-top: 30px;
-            font-size: 13px;
+            font-size: 12px;
+            line-height: 1.7;
         }
 
-        .rodape p {
-            margin: 0;
+        footer div {
+            min-width: 180px;
         }
+
+        footer b {
+            color: #fff8ed;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #e4c98a;
+            text-decoration: underline;
+        }
+
 
 
         /* RESPONSIVIDADE */
@@ -160,6 +181,16 @@
             .card-img-top {
                 height: 140px;
                 width: 140px;
+            }
+
+
+            footer {
+                flex-wrap: wrap;
+                padding: 25px 15px;
+            }
+
+            footer div {
+                min-width: 200px;
             }
 
         }
@@ -184,6 +215,17 @@
                 font-size: 14px;
             }
 
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer div {
+                width: 100%;
+            }
+
+
+
         }
 
     </style>
@@ -194,34 +236,52 @@
 <body>
 
 
-     <!-- CABEÇALHO -->
-     <header id="cabecalho">
+   <!-- BARRA DE NAVEGAÇÃO -->
 
-<div class="container-fluid">
+   <nav class="navbar navbar-expand-md navbar-dark cor_barra">
 
-    <img class="logo"
-        src="img/logo.jpg"
-        alt="Essência Gourmet">
+<!-- Logo / Nome -->
 
-    <p>Essência Gourmet</p>
+<a href="index.html" class="navbar-brand ms-3">
+    Essência Gourmet
+</a>
 
-    <div class="links">
-        <a href="sobre.php">Sobre Nós</a>
-        <a href="faleconosco.php">Fale Conosco</a>
-    </div>
+
+<!-- Menu Hamburguer -->
+
+<button class="navbar-toggler me-3"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navegacao"
+    aria-controls="navegacao"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+
+    <span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+<!-- Navegação -->
+
+<div class="collapse navbar-collapse" id="navegacao">
+
+    <ul class="navbar-nav ms-auto me-3">
+
+        <li class="nav-item">
+
+            <a href="telaprincipal.php"
+                class="nav-link text-white">
+
+                Voltar ao Menu
+
+            </a>
+
+        </li>
+
+    </ul>
 
 </div>
-
-</header>
-
-
-<!-- MENU -->
-<nav>
-
-<a href="1cafe.php">Café</a> |
-<a href="2bolos.php">Bolos</a> |
-<a href="3tortas.php">Tortas</a> |
-<a href="4doces.php">Doces</a>
 
 </nav>
 
@@ -385,13 +445,33 @@
     </main>
 
 
+    
     <!-- RODAPÉ -->
+    <footer>
 
-    <footer class="rodape">
+        <div>
+            <b>REDES E CONTATOS</b><br>
+            essenciagourmet.com.br<br>
+            WhatsApp: (12) 97823-1624 | 3061-0192
+        </div>
 
-        <p>
-            2026 - Essência Gourmet
-        </p>
+        <div>
+            <b>Envio</b><br>
+            <a href="#">Política de Privacidade</a><br>
+            <a href="#">Trocas e devoluções</a>
+        </div>
+
+        <div>
+            <b>Formas de pagamento</b><br>
+            Dinheiro / Cartão de débito<br>
+            Cartão de crédito / Pix
+        </div>
+
+        <div>
+            <b>ACOMPANHE</b><br>
+            @essenciagourmet_<br>
+            essencia_gourmet
+        </div>
 
     </footer>
 
